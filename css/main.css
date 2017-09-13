@@ -16,69 +16,13 @@ ul li {
     min-height: calc(100vh - 40px);
 }
 
+.logo {
+    width: 272px;
+}
+
 .search-area {
     width: 428px;
     margin: auto;
-}
-    .search-buttons input {
-        background: #f1f1f1;
-    }
-
-.site-footer  {
-    background: #f1f1f1;
-    padding: 12.5px 0;
-}
-    .site-footer ul {
-        padding: 0;
-        margin: 0;
-    }
-
-    .footer-col {
-        float: left;
-    }
-    .footer-col li {
-        display: inline-block;
-    }
-    .footer-col:last-child {
-        background: pink;
-
-    }
-
-
-/* page elements */
-.menu {
-    text-align: right;
-    padding-left: 0;
-    margin-right: 25px;
-    margin-top: 0;
-}
-  .menu a {
-      color: #000;
-  }
-  .menu li {
-      display: inline-block;
-      margin-left: 12px;
-  }
-  .menu .google-acct,
-  .menu .google-acct::before {
-      display: inline-block;
-      color: #fff;
-  }
-  .menu .google-acct::before {
-      content: "";
-      height: 32px;
-      width: 32px;
-      background: #ee6b08;
-      border-radius: 100%;
-      margin-right: -21px;
-      vertical-align: middle;
-  }
-  .gmail, .g-imgs, .fa-bell, .site-footer {
-      font-size: .8125em; /* 13px / 16px */
-  }
-
-.logo {
-    width: 272px;
 }
 
 .voice-search {
@@ -88,6 +32,56 @@ ul li {
 .most-viewed {
     display: none;
 }
+
+.site-footer  {
+    background: #f1f1f1;
+    padding: 12.5px 0;
+}
+    .site-footer ul {
+        padding: 0;
+        margin: 0;
+    }
+    .footer-col {
+        float: left;
+    }
+        .footer-col li {
+            display: inline-block;
+        }
+        .footer-col:last-child {
+            background: pink;
+        }
+
+
+/* page elements */
+.menu {
+    text-align: right;
+    padding-left: 0;
+    margin-right: 25px;
+    margin-top: 0;
+}
+    .menu a {
+        color: #000;
+    }
+    .menu li {
+        display: inline-block;
+        margin-left: 12px;
+    }
+    .menu .google-acct,
+    .menu .google-acct::before {
+        display: inline-block;
+        color: #fff;
+    }
+    .menu .google-acct::before {
+        content: "";
+        height: 32px;
+        width: 32px;
+        background: #ee6b08;
+        border-radius: 100%;
+        margin-right: -21px;
+        vertical-align: middle;
+    }
+
+
 
 
 /* form elements */
@@ -103,6 +97,10 @@ ul li {
     transition: box-shadow .1s;
 }
 
+.search-buttons input {
+    background: #f1f1f1;
+}
+
 
 /* state rules*/
 .menu .gmail:hover,
@@ -114,6 +112,12 @@ ul li {
 .search-box:focus {
     box-shadow: 0 3px 6px 0 rgba(0,0,0, .2),
                 0 0 0 1px rgba(0,0,0, 0.08);
+}
+
+
+/* theme rules */
+.gmail, .g-imgs, .fa-bell, .site-footer {
+    font-size: .8125em; /* 13px / 16px */
 }
 
 
