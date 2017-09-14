@@ -16,18 +16,19 @@ ul li {
     min-height: calc(100vh - 40px);
 }
 
-.logo {
-    width: 272px;
-}
-
 .search-area {
     width: 428px;
     margin: auto;
+    text-align: center;
 }
+    .logo {
+        padding-top: 135px;
+        width: 272px;
+    }
+    .voice-search {
+        display: none;
+    }
 
-.voice-search {
-    display: none;
-}
 
 .most-viewed {
     display: none;
@@ -41,36 +42,51 @@ ul li {
         padding: 0;
         margin: 0;
     }
-    .footer-col {
+    .footer-col-a {
         float: left;
     }
-        .footer-col li {
-            display: inline-block;
+        .footer-col-a li {
+            padding-left: 30px;
         }
-        .footer-col:last-child {
-            background: pink;
+    .footer-col-b {
+        float: right;
+    }
+        .footer-col-b li {
+            padding-right: 30px;
         }
+    [class*="footer-col"] li {
+        display: inline-block;
+    }
 
 
 /* page elements */
 .menu {
     text-align: right;
     padding-left: 0;
-    margin-right: 25px;
-    margin-top: 0;
+
+    margin: 0 40px 16px 25px;
+    padding-top: 16px;
 }
     .menu a {
         color: #000;
     }
     .menu li {
         display: inline-block;
-        margin-left: 12px;
+        margin-left: 15px;
+    }
+    .menu .fa-th {
+        font-size: 20px;
+        vertical-align: middle;
+    }
+    .menu .fa-bell::before {
+
     }
     .menu .google-acct,
     .menu .google-acct::before {
         display: inline-block;
         color: #fff;
     }
+
     .menu .google-acct::before {
         content: "";
         height: 32px;
@@ -80,8 +96,6 @@ ul li {
         margin-right: -21px;
         vertical-align: middle;
     }
-
-
 
 
 /* form elements */
@@ -94,11 +108,19 @@ ul li {
     background: #fff;
     box-shadow: 0 2px 2px 0 rgba(0,0,0, .16),
               0 0 0 1px rgba(0,0,0, 0.08);
+    margin: 20px 0 30px 0;
     transition: box-shadow .1s;
 }
 
 .search-buttons input {
     background: #f1f1f1;
+    border: none;
+    border-radius: 2px;
+    padding: 11px 14px;
+}
+
+.search-buttons input + input {
+    margin-left: 5px;
 }
 
 
@@ -110,14 +132,36 @@ ul li {
 
 .search-box:hover,
 .search-box:focus {
+    outline: none;
     box-shadow: 0 3px 6px 0 rgba(0,0,0, .2),
                 0 0 0 1px rgba(0,0,0, 0.08);
 }
 
+.search-buttons input:hover {
+    color: #000;
+    background: linear-gradient(135deg, #f8f8f8, #f1f1f1);
+    /*border: 1px solid #c6c6c6;*/
+    box-shadow: inset 0 0 0 1px #c6c6c6, 0px 1px 3px 0px rgba(0,0,0,0.16);
+}
+
+.site-footer a:hover {
+    border-bottom: 1px solid #666;
+}
+
 
 /* theme rules */
-.gmail, .g-imgs, .fa-bell, .site-footer {
+.gmail, .g-imgs, .fa-bell, .site-footer,
+.search-buttons input {
     font-size: .8125em; /* 13px / 16px */
+}
+
+.search-buttons input {
+    font-weight: bold;
+    color: #757575;
+}
+
+.site-footer a {
+    color: #666;
 }
 
 
