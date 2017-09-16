@@ -1,7 +1,7 @@
 /* base elements */
 body {
+    background: #fff;
 }
-
 a {
     text-decoration: none;
 }
@@ -13,22 +13,14 @@ ul li {
 
 /* layout */
 .wrapper {
-    min-height: calc(100vh - 40px);
+    min-height: calc(100vh - 41px);
 }
 
 .search-area {
-    width: 428px;
+    width: 664px;
     margin: auto;
     text-align: center;
 }
-    .logo {
-        padding-top: 135px;
-        width: 272px;
-    }
-    .voice-search {
-        display: none;
-    }
-
 
 .most-viewed {
     display: none;
@@ -36,7 +28,10 @@ ul li {
 
 .site-footer  {
     background: #f1f1f1;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0,0,0, 0.08);
     padding: 12.5px 0;
+
 }
     .site-footer ul {
         padding: 0;
@@ -67,26 +62,50 @@ ul li {
     margin: 0 40px 16px 25px;
     padding-top: 16px;
 }
-    .menu a {
-        color: #000;
-    }
     .menu li {
         display: inline-block;
         margin-left: 15px;
+        vertical-align: middle;
+    }
+
+    .menu .g-apps {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        text-align: center;
     }
     .menu .fa-th {
         font-size: 20px;
-        vertical-align: middle;
+        line-height: 1.5;
     }
-    .menu .fa-bell::before {
 
+    .menu .bell {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        position: relative;
     }
+        .menu .fa-bell {
+            color: #fff;
+            font-size: 10px;
+            position: absolute;
+            left: 11px;
+            top: 8px;
+        }
+        .menu .bell::before {
+            content: "";
+            background: #666;
+            border-radius: 50%;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 4px 4px 0 0;
+        }
     .menu .google-acct,
     .menu .google-acct::before {
         display: inline-block;
         color: #fff;
     }
-
     .menu .google-acct::before {
         content: "";
         height: 32px;
@@ -97,8 +116,70 @@ ul li {
         vertical-align: middle;
     }
 
+.logo {
+    padding-top: 135px;
+    width: 272px;
+}
+
+.voice-search {
+    cursor: pointer;
+    width: 41px;
+    height: 44px;
+    background: url("../img/data-image-png;base….png") no-repeat center;
+    background-size: 24px 24px;
+    position: absolute;
+    right: 1px;
+    top: 20px;
+}
+    .voice-search .caption {
+        display: none;
+        padding: 8px 5px;
+        position: absolute;
+        right: -35px;
+        top: 40px;
+        width: 100px;
+        background: #000;
+        box-shadow: 0 0 0 1px #fff,
+                    0px 1px 3px 2px rgba(0,0,0,0.2);
+        color: #fff;
+        font-size: 11px;
+        font-weight: bolder;
+    }
+        .voice-search .caption::before,
+        .voice-search .caption::after {
+            bottom: 100%;
+            left: 50%;
+            content: "";
+            display: inline-block;
+            border: solid transparent;
+
+
+            width: 0;
+            height: 0;
+            position: absolute;
+
+        }
+        /* white triangle */
+        .voice-search .caption::before {
+        	border-bottom-color: #fff;
+        	border-width: 7.5px;
+        	margin-left: -7.5px;
+
+
+        }
+        /* black triangle */
+        .voice-search .caption::after {
+        	border-bottom-color: #000;
+        	border-width: 6px;
+        	margin-left: -6px;
+        }
+
 
 /* form elements */
+.search-area form {
+    position: relative;
+}
+
 .search-box {
     box-sizing: border-box;
     border: none;
@@ -118,10 +199,9 @@ ul li {
     border-radius: 2px;
     padding: 11px 14px;
 }
-
-.search-buttons input + input {
-    margin-left: 5px;
-}
+    .search-buttons input + input {
+        margin-left: 5px;
+    }
 
 
 /* state rules*/
@@ -130,11 +210,17 @@ ul li {
     border-bottom: 1px solid #000;
 }
 
+.menu .fa-th:hover {}
+
 .search-box:hover,
 .search-box:focus {
     outline: none;
     box-shadow: 0 3px 6px 0 rgba(0,0,0, .2),
                 0 0 0 1px rgba(0,0,0, 0.08);
+}
+
+.voice-search:hover p {
+    display: block;
 }
 
 .search-buttons input:hover {
@@ -155,6 +241,14 @@ ul li {
     font-size: .8125em; /* 13px / 16px */
 }
 
+.gmail, .g-imgs {
+    color: #000;
+}
+
+.fa-th {
+    color: #666;
+}
+
 .search-buttons input {
     font-weight: bold;
     color: #757575;
@@ -172,5 +266,3 @@ ul li {
     clear: both;
 
 }
-
-/* media queries */
