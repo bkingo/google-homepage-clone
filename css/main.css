@@ -203,7 +203,13 @@ ul li {
     border-bottom: 1px solid #000;
 }
 
-.menu .fa-th:hover {}
+.menu .g-apps:hover .fa-th {
+    color: #000;
+}
+
+.menu .bell:hover::before {
+    background: #000;
+}
 
 .search-box:hover,
 .search-box:focus {
@@ -238,17 +244,13 @@ ul li {
     color: #000;
 }
 
-.fa-th {
+.fa-th, .site-footer a {
     color: #666;
 }
 
 .search-buttons input {
     font-weight: bold;
     color: #757575;
-}
-
-.site-footer a {
-    color: #666;
 }
 
 
