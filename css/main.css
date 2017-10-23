@@ -137,13 +137,40 @@ ul li {
         }
 
         /* google apps drop-down */
-        .g-apps {
+        .gapps {
+            position: relative;
+            display: inline-block;
+        }
 
+        .gapps__grid {
+            padding: 28px 28px;
+        }
+
+        .gapps__row {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .gapps__item {
+            display: inline-block;
+            text-align: center;
         }
 
         .gapps__link {
+            display: inline-block;
+            width: 84px;
+            height: 86px;
+        }
 
+        .gapps__name {
+            color: #404040;
+            font-size: .83rem;
+            margin: -5px 0 0 0;
+        }
 
+        .gapps__link:hover {
+            /*border: 1px solid #e5e5e5;*/
+            box-shadow: 0 0 0 1px #e5e5e5;
         }
 
 
