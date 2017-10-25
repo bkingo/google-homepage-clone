@@ -88,6 +88,15 @@ ul li {
 
     }
 
+    .menu__popout--white::before,
+    .menu__popout--white::after {
+        left: 65%
+    }
+
+    .menu__popout--white::after {
+        border-bottom-color: #fff;
+    }
+
 
 
 /* page elements */
@@ -97,13 +106,14 @@ ul li {
     margin: 0 40px 16px 25px;
     padding-top: 16px;
 }
-    .menu li {
+    .menu__item {
         display: inline-block;
         margin-left: 15px;
         vertical-align: middle;
     }
     .menu .g-apps {
         display: inline-block;
+        cursor: pointer;
         width: 30px;
         height: 30px;
         text-align: center;
@@ -138,12 +148,17 @@ ul li {
 
         /* google apps drop-down */
         .gapps {
-            position: relative;
-            display: inline-block;
+            background: #fff;
+            display: none;
+            right: 2em;
+            top: 3.8em;
+            z-index: 50;
+
         }
 
         .gapps__grid {
             padding: 28px 28px;
+            margin-bottom: 0;
         }
 
         .gapps__row {
@@ -168,6 +183,18 @@ ul li {
             margin: -5px 0 0 0;
         }
 
+        .gapps__reveal {
+            color: #737373;
+            background: #f5f5f5;
+            display: block;
+            font-size: .83rem;
+            padding: 10px 0;
+            text-align: center;
+
+
+
+        }
+
         .gapps__link:hover {
             /*border: 1px solid #e5e5e5;*/
             box-shadow: 0 0 0 1px #e5e5e5;
@@ -175,7 +202,9 @@ ul li {
 
 
 
-        /* google apps drop-down image backgrounds */
+        /* google apps drop-down image backgrounds
+           measured in increments of 69px on main background image
+        */
         .span-bg {
             background: url('../img/p1_010136a6.png') no-repeat;
             display: inline-block;
@@ -289,8 +318,13 @@ ul li {
                 font-size: 1.5rem;
                 margin-bottom: 6px;
             }
-    .menu .google-acct,
-    .menu .google-acct::before {
+
+    .google-acct {
+        cursor: pointer;
+    }
+
+    .google-acct,
+    .google-acct::before {
         display: inline-block;
         color: #fff;
     }
