@@ -121,6 +121,7 @@ ul li {
     .menu .fa-th {
         font-size: 1.25em; /* 20px / 16px */
         line-height: 1.5;
+        pointer-events: none;
     }
     .menu .bell {
         cursor: pointer;
@@ -132,6 +133,7 @@ ul li {
         .menu .fa-bell {
             color: #fff;
             font-size: .625em; /* 10px / 16px */
+            pointer-events: none;
             position: absolute;
             left: 11px;
             top: 8px;
