@@ -62,6 +62,7 @@ var isClickInsideMenu = function(element) {
 document.addEventListener('click', function(e) {
     if (e.target.className.includes('js-dd-btn') === false && !isClickInsideMenu(e.target)) {
         closeDropdownMenus();
+        lastBtnClicked = 'whitespace';
     }
 });
 
