@@ -19,6 +19,7 @@ searchForm.addEventListener('submit', function(e) {
 
 var dropdownMenuBtns = document.querySelectorAll('.js-dd-btn');
 var dropdownMenuEls = document.querySelectorAll('.js-dd-menu');
+var lastBtnClicked;
 
 var getDropdownMenu = function(button) {
     return button.parentNode.querySelector('.js-dd-menu');
@@ -35,11 +36,18 @@ var closeDropdownMenus = function() {
     });
 }
 
-// attach onclick function to dropdown buttons to open their dropdown menu
+/*
+If a dropdown button is clicked, open it's dropdown menu.
+If the selected dropdown button was the last selected button,
+close all open dropdown menus.
+*/
 dropdownMenuBtns.forEach(function(button) {
     button.addEventListener('click', function(e) {
         closeDropdownMenus();
-        openDropdown(button);
+        if (button !== lastBtnClicked) {
+            lastBtnClicked = button;
+            openDropdown(button);
+        } else lastBtnClicked = '';
     });
 });
 
