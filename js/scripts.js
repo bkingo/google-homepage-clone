@@ -28,6 +28,13 @@ var openDropdown = function(button) {
     getDropdownMenu(button).style.display = 'block';
 }
 
+// close any open dropdown menus
+var closeDropdownMenus = function() {
+    dropdownMenuEls.forEach(function(menu) {
+        menu.style.display = 'none';
+    });
+}
+
 // attach onclick function to dropdown buttons to open their dropdown menu
 dropdownMenuBtns.forEach(function(button) {
     button.addEventListener('click', function(e) {
@@ -36,18 +43,10 @@ dropdownMenuBtns.forEach(function(button) {
     });
 });
 
-// close any open dropdown menus
-var closeDropdownMenus = function() {
-    dropdownMenuEls.forEach(function(menu) {
-        menu.style.display = 'none';
-    });
-}
-
-// user clicks on element outside dropdown menu
+// determine if user clicked on element inside dropdown menu
 var isClickInsideMenu = function(element) {
-    // check if element is descendant of any dropdown menus
     for (var i = 0; i < dropdownMenuEls.length; i++) {
-        if (dropdownMenuEls[i].contains(element)) return true;
+        if (dropdownMenuEls[i].contains(element)) return true; // return true if element is descendant of a dropdown menu
     }
 }
 
