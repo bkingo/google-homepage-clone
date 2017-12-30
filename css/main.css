@@ -19,7 +19,7 @@ ul li {
 }
 
 .search-area {
-    width: 664px;
+    max-width: 664px;
     margin: auto;
     text-align: center;
 }
