@@ -62,12 +62,8 @@ ul li {
     box-shadow: 0px 2px 8px 1px rgba(0,0,0,0.1);
     position: absolute;
     display: none;
-
-
     right: 1.8rem;
     top: 4rem;
-
-
     z-index: 50;
 }
 
@@ -95,11 +91,6 @@ ul li {
         margin-left: -10px;
 
     }
-
-
-
-
-
     .menu__popout--white::after {
         border-bottom-color: #fff;
     }
@@ -158,9 +149,6 @@ ul li {
         /* google apps drop-down */
         .gapps {
             background: #fff;
-
-
-
         }
 
         .gapps::before,
@@ -202,13 +190,12 @@ ul li {
             font-size: .83rem;
             padding: 10px 0;
             text-align: center;
-
-
-
         }
 
         .gapps__link:hover {
             /*border: 1px solid #e5e5e5;*/
+            -webkit-box-shadow: 0 0 0 1px #e5e5e5;
+            -moz-box-shadow: 0 0 0 1px #e5e5e5;
             box-shadow: 0 0 0 1px #e5e5e5;
         }
 
@@ -264,11 +251,9 @@ ul li {
         .gnotify {
             background: #eee;
             border-bottom: none;
-
             /*right: 2em;
             top: 3.8em;
             z-index: 50;*/
-
         }
         .gnotify::before,
         .gnotiy::after {
@@ -547,10 +532,14 @@ ul li {
         padding: 13px 10px;
         width: 100%;
         background: #fff;
+        -webkit-box-shadow: 0 2px 2px rgba(0,0,0, .16),
+                            0 0 0 1px rgba(0,0,0, 0.08);
+        -moz-box-shadow: 0 2px 2px rgba(0,0,0, .16),
+                        0 0 0 1px rgba(0,0,0, 0.08);
         box-shadow: 0 2px 2px rgba(0,0,0, .16),
                     0 0 0 1px rgba(0,0,0, 0.08);
         margin: 20px 0 30px 0;
-        transition: box-shadow .1s;
+        /* transition: box-shadow .1s; */
     }
     .search-buttons input {
         background: #f1f1f1;
@@ -583,6 +572,10 @@ ul li {
 .search-box:hover,
 .search-box:focus {
     outline: none;
+    -webkit-box-shadow: 0 3px 6px 0 rgba(0,0,0, .2),
+                        0 0 0 1px rgba(0,0,0, 0.08);
+    -moz-box-shadow: 0 3px 6px 0 rgba(0,0,0, .2),
+                     0 0 0 1px rgba(0,0,0, 0.08);
     box-shadow: 0 3px 6px 0 rgba(0,0,0, .2),
                 0 0 0 1px rgba(0,0,0, 0.08);
 }
@@ -595,6 +588,8 @@ ul li {
     color: #000;
     background: linear-gradient(135deg, #f8f8f8, #f1f1f1);
     /*border: 1px solid #c6c6c6;*/
+    -webkit-box-shadow: inset 0 0 0 1px #c6c6c6, 0px 1px 3px 0px rgba(0,0,0,0.16);
+    -webkit-box-shadow: inset 0 0 0 1px #c6c6c6, 0px 1px 3px 0px rgba(0,0,0,0.16);
     box-shadow: inset 0 0 0 1px #c6c6c6, 0px 1px 3px 0px rgba(0,0,0,0.16);
 }
 
@@ -612,8 +607,6 @@ ul li {
 .gmail, .g-imgs {
     color: #000;
 }
-
-
 
 .fa-th, .site-footer a {
     color: #666;
